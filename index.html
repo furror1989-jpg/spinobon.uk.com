@@ -1,1273 +1,272 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>queenwin Casino: Official UK Platform for Slots, Live Games & Promotions</title>
-    <meta name="description" content="Join queenwin Casino to access popular slots, dynamic live dealer tables, and generous bonuses. Experience secure gaming, fast withdrawals, and VIP treatment in the UK.">
-    <link rel="canonical" href="https://spinobon.uk.com">
-    <link rel="alternate" hreflang="uk" href="https://spinobon.uk.com">
+    <title>Spinobon Casino – Bingo, Slots, and Secure Payouts</title>
+    <meta name="description" content="Explore Spinobon Casino's games, bonuses, payment methods, and community features. Learn how to register, claim promotions, and enjoy a safe environment.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #2d3436;
-            background: #f8f9fa;
-        }
-
-        .header {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            color: #6c5ce7;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 20px;
-        }
-
-        .nav {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav a {
-            color: #2d3436;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: color 0.3s;
-        }
-
-        .nav a:hover {
-            color: #6c5ce7;
-        }
-
-        .header-buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .btn-login {
-            padding: 10px 25px;
-            border: 2px solid #6c5ce7;
-            background: transparent;
-            color: #6c5ce7;
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 14px;
-        }
-
-        .btn-login:hover {
-            background: #6c5ce7;
-            color: #fff;
-        }
-
-        .btn-join {
-            padding: 10px 30px;
-            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 14px;
-            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
-        }
-
-        .btn-join:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            padding: 60px 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-            background-size: cover;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content {
-            color: #fff;
-        }
-
-        .bonus-tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            backdrop-filter: blur(10px);
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 900;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .hero-cta {
-            display: inline-block;
-            padding: 18px 45px;
-            background: #fff;
-            color: #6c5ce7;
-            border-radius: 10px;
-            font-weight: 800;
-            text-decoration: none;
-            font-size: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s;
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-image {
-            position: relative;
-            text-align: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
-        }
-
-        .tabs {
-            background: #fff;
-            border-bottom: 1px solid #e0e0e0;
-            position: sticky;
-            top: 70px;
-            z-index: 999;
-        }
-
-        .tabs-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            gap: 5px;
-            padding: 0 30px;
-            overflow-x: auto;
-        }
-
-        .tab {
-            padding: 18px 25px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 14px;
-            color: #636e72;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s;
-            white-space: nowrap;
-        }
-
-        .tab:hover {
-            color: #6c5ce7;
-        }
-
-        .tab.active {
-            color: #6c5ce7;
-            border-bottom-color: #6c5ce7;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 30px;
-        }
-
-        .section {
-            margin-bottom: 60px;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            font-size: 32px;
-            font-weight: 800;
-            color: #2d3436;
-        }
-
-        .rating-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            padding: 40px;
-            color: #fff;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 40px rgba(108, 92, 231, 0.3);
-        }
-
-        .rating-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 30px;
-        }
-
-        .rating-left h2 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .rating-score {
-            font-size: 72px;
-            font-weight: 900;
-            display: flex;
-            align-items: baseline;
-        }
-
-        .rating-score span {
-            font-size: 36px;
-            opacity: 0.8;
-            margin-left: 5px;
-        }
-
-        .rating-badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 15px 25px;
-            border-radius: 15px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-        }
-
-        .rating-badge-title {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            opacity: 0.9;
-        }
-
-        .rating-badge-value {
-            font-size: 18px;
-            font-weight: 800;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-        }
-
-        .feature-icon {
-            font-size: 24px;
-        }
-
-        .feature-text {
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .info-card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e8e8e8;
-        }
-
-        .info-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #6c5ce7;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .info-card p {
-            color: #636e72;
-            line-height: 1.8;
-        }
-
-        .info-card ul {
-            margin-top: 15px;
-        }
-
-        .info-list {
-            list-style: none;
-        }
-
-        .info-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .info-list li:last-child {
-            border-bottom: none;
-        }
-
-        .info-label {
-            font-weight: 600;
-            color: #2d3436;
-        }
-
-        .info-value {
-            color: #636e72;
-            text-align: right;
-        }
-
-        .check-icon {
-            color: #00b894;
-        }
-
-        .cross-icon {
-            color: #d63031;
-        }
-
-        .content-section h2 {
-            font-size: 32px;
-            font-weight: 800;
-            color: #2d3436;
-            margin-bottom: 20px;
-        }
-
-        .content-section h3 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #6c5ce7;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        .content-section p {
-            color: #636e72;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .content-section ul {
-            margin: 20px 0;
-            padding-left: 25px;
-        }
-
-        .content-section ul li {
-            color: #636e72;
-            line-height: 1.8;
-            margin-bottom: 10px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            background: #fff;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        thead {
-            background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-        }
-
-        thead th {
-            color: #fff;
-            padding: 20px;
-            text-align: left;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        tbody td {
-            padding: 18px 20px;
-            border-bottom: 1px solid #e8e8e8;
-            color: #2d3436;
-        }
-
-        tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        tbody tr:hover {
-            background: #f8f9fa;
-        }
-
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .game-card {
-            background: #fff;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .game-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .game-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
-        }
-
-        .game-title {
-            padding: 15px;
-            font-weight: 700;
-            font-size: 16px;
-            color: #2d3436;
-            text-align: center;
-        }
-
-        .providers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 20px;
-        }
-
-        .provider-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s;
-            border: 1px solid #e8e8e8;
-        }
-
-        .provider-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .provider-logo {
-            font-weight: 800;
-            font-size: 18px;
-            color: #2d3436;
-        }
-
-        .payment-methods {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .payment-badge {
-            background: #fff;
-            border: 2px solid #e8e8e8;
-            border-radius: 10px;
-            padding: 15px 25px;
-            font-weight: 700;
-            font-size: 14px;
-            color: #2d3436;
-            transition: all 0.3s;
-        }
-
-        .payment-badge:hover {
-            border-color: #6c5ce7;
-            color: #6c5ce7;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
-            color: #fff;
-            margin: 60px 0;
-        }
-
-        .cta-section h2 {
-            font-size: 40px;
-            font-weight: 900;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .footer {
-            background: #2d3436;
-            color: #b2bec3;
-            padding: 60px 30px 30px;
-        }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h3 {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .footer-section p {
-            line-height: 1.8;
-            font-size: 14px;
-        }
-
-        .footer-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .footer-badge {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 12px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 30px;
-            text-align: center;
-        }
-
-        .disclaimer {
-            font-size: 13px;
-            line-height: 1.8;
-            color: #95a5a6;
-            margin-bottom: 20px;
-        }
-
-        .footer-bottom p {
-            font-size: 14px;
-        }
-
-        .faq-item {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e8e8e8;
-            margin-bottom: 20px;
-        }
-
-        .faq-item h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #6c5ce7;
-            margin-bottom: 15px;
-        }
-
-        .faq-item p {
-            color: #636e72;
-            line-height: 1.8;
-        }
-
-        @media (max-width: 968px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .nav {
-                display: none;
-            }
-
-            .section-title {
-                font-size: 24px;
-            }
-
-            .games-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-
-            .header-container {
-                padding: 15px;
-            }
-
-            .container {
-                padding: 30px 15px;
-            }
-
-            .tabs-container {
-                padding: 0 15px;
-            }
-
-            table {
-                font-size: 12px;
-            }
-
-            thead th, tbody td {
-                padding: 12px 10px;
-            }
-
-            .content-section h2 {
-                font-size: 24px;
-            }
-
-            .content-section h3 {
-                font-size: 20px;
-            }
-
-            .rating-header {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .rating-left h2 {
-                font-size: 28px;
-            }
-
-            .rating-score {
-                font-size: 56px;
-            }
-
-            .cta-section h2 {
-                font-size: 28px;
-            }
-
-            .cta-section {
-                padding: 40px 20px;
-            }
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6 }
+        .tab-active { background-color: white; border-bottom: 1px solid white; z-index: 10; font-weight: 700 }
+        .tab-inactive { background-color: #f9fafb; color: #8b0000 }
+        .tab-inactive:hover { background-color: white }
+        .prefix-viz { 
+            background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=300&q=80'); 
+            background-size: cover; 
+            image-rendering: pixelated; 
+            filter: contrast(150%) brightness(50%) hue-rotate(180deg); 
+            animation: pulse 4s infinite alternate 
+        }
+        @keyframes pulse { from { opacity: 0.8 } to { opacity: 1 } }
+        .content-area h2 { font-size: 1.875rem; font-weight: 900; margin-top: 2rem; margin-bottom: 1rem; color: #111827; letter-spacing: -0.025em; }
+        .content-area h3 { font-size: 1.5rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #111827; }
+        .content-area p { margin-bottom: 1.25rem; line-height: 1.625; color: #374151; }
+        .content-area ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        .content-area li { margin-bottom: 0.5rem; color: #374151; }
+        .content-area table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.875rem; }
+        .content-area th { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; font-weight: 700; }
+        .content-area td { border: 1px solid #e5e7eb; padding: 0.75rem; }
     </style>
 </head>
-<body>
-
-    <header class="header">
-        <div class="header-container">
-            <a href="https://spinobon.uk.com" class="logo">
-                <div class="logo-icon">🎰</div>
-                SPINOBON CASINO
-            </a>
-            <nav class="nav">
-                <a href="#slots">SLOTS</a>
-                <a href="#live-casino">LIVE CASINO</a>
-                <a href="#bonuses">BONUSES</a>
-                <a href="#payments">PAYMENTS</a>
-                <a href="#about">ABOUT</a>
-            </nav>
-            <div class="header-buttons">
-                <a href="https://afflink.com?utm-source-test=teeeest" class="btn-login" rel="nofollow noopener" target="_blank">LOG IN</a>
-                <a href="https://afflink.com?utm-source-test=teeeest" class="btn-join" rel="nofollow noopener" target="_blank">JOIN NOW</a>
+<body class="text-gray-900">
+    <header class="bg-black text-white h-12 flex items-center justify-between sticky top-0 z-50 px-4 md:px-0">
+        <div class="max-w-6xl mx-auto w-full flex items-center justify-between h-full">
+            <div class="flex items-center gap-4 md:gap-8 flex-1">
+                <a href="https://afflink.com?utm-source-test=teeeest" class="flex items-center font-black text-lg cursor-pointer">
+                    <i data-lucide="activity" class="w-6 h-6 mr-1 text-white"></i>
+                    <span>Spinobon Casino</span>
+                </a>
+                <div class="hidden md:flex items-center flex-1 max-w-xl">
+                    <input type="text" placeholder="Search games or bonuses..." class="bg-white text-black px-3 py-1 text-sm w-full outline-none border-none" id="searchInput">
+                    <a href="https://afflink.com?utm-source-test=teeeest" class="bg-[#8b0000] hover:bg-red-700 transition-colors p-1 px-3 flex items-center justify-center">
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-white"></i>
+                    </a>
+                </div>
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="h-full flex items-center">
+                <a href="https://afflink.com?utm-source-test=teeeest" class="bg-[#8b0000] h-full flex items-center px-6 cursor-pointer hover:bg-red-700 transition-colors">
+                    <span class="text-sm font-bold">Login</span>
+                </a>
             </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="bonus-tag">Welcome Bonus</span>
-                <h1>queenwin Casino – Your UK Home for Slots, Live Action & Bonuses</h1>
-                <p>Join queenwin Casino to access popular slots, dynamic live dealer tables, and generous bonuses. Experience secure gaming, fast withdrawals, and VIP treatment in the UK.</p>
-                <a href="https://afflink.com?utm-source-test=teeeest" class="hero-cta" rel="nofollow noopener" target="_blank">JOIN NOW</a>
-            </div>
-            <div class="hero-image">
-                <svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="50" y="50" width="300" height="200" rx="20" fill="white" opacity="0.9"/>
-                    <rect x="80" y="80" width="80" height="80" rx="10" fill="#FFD700"/>
-                    <rect x="180" y="80" width="80" height="80" rx="10" fill="#FF6B9D"/>
-                    <rect x="280" y="80" width="80" height="80" rx="10" fill="#4CAF50"/>
-                    <circle cx="200" cy="200" r="40" fill="#6c5ce7"/>
-                    <text x="200" y="215" text-anchor="middle" fill="white" font-size="30" font-weight="bold">🎰</text>
-                </svg>
-            </div>
-        </div>
-    </section>
-
-    <nav class="tabs">
-        <div class="tabs-container">
-            <button class="tab active">🎯 OVERVIEW</button>
-            <button class="tab">🎁 BONUSES</button>
-            <button class="tab">🎮 GAMES</button>
-            <button class="tab">💳 PAYMENT METHODS</button>
-            <button class="tab">🛡️ SECURITY</button>
-            <button class="tab">❓ FAQ</button>
-        </div>
-    </nav>
-
-    <div class="container">
-        
-        <section class="section">
-            <div class="rating-card">
-                <div class="rating-header">
-                    <div class="rating-left">
-                        <h2>queenwin Casino Review 2026</h2>
-                        <div class="rating-score">4.9<span>/10</span></div>
-                    </div>
-                    <div class="rating-badge">
-                        <div class="rating-badge-title">SAFETY INDEX</div>
-                        <div class="rating-badge-value">HIGH</div>
-                    </div>
-                </div>
-                <p>queenwin Casino is an established online casino platform that brings UK players a comprehensive selection of slots, table games, and live dealer experiences. The site focuses on delivering entertaining gameplay alongside generous bonus opportunities for both newcomers and loyal members.</p>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <span class="feature-icon">✅</span>
-                        <span class="feature-text">Licensed & Regulated</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🎮</span>
-                        <span class="feature-text">500+ Casino Games</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">💰</span>
-                        <span class="feature-text">Fast Withdrawals</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🔒</span>
-                        <span class="feature-text">SSL Encrypted</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section content-section">
-            <h2>Introduction to queenwin Casino</h2>
-            <p>queenwin Casino is an established online casino platform that brings UK players a comprehensive selection of slots, table games, and live dealer experiences. The site focuses on delivering entertaining gameplay alongside generous bonus opportunities for both newcomers and loyal members.</p>
-            <p>Many players approach new platforms with caution, particularly regarding legitimacy and data protection. queenwin Casino operates under strict licensing requirements and employs advanced security measures to protect user information. The platform maintains transparent policies on fair play, ensuring every game outcome is determined by certified Random Number Generators.</p>
-            <p>The casino's main appeal lies in its diverse portfolio of gaming options. Players can explore hundreds of slot titles, classic table games like roulette and blackjack, and immersive live dealer rooms. Each category features content from reputable software providers known for quality and reliability.</p>
-            <p>Beyond the games themselves, queenwin Casino addresses practical concerns around secure banking and responsible gaming. Withdrawal processes are clearly explained, and customer support channels remain accessible for any questions or technical issues that arise during gameplay.</p>
-        </section>
-
-        <section class="section content-section">
-            <h2>Registration & Sign-Up Process</h2>
-            <p>Creating an account at queenwin Casino takes just a few minutes. The sign-up process begins on the homepage, where new players click the registration button and provide basic information including name, email address, date of birth, and residential details.</p>
-            <p>After completing the initial form, users create login credentials for future access. The queenwin login system requires a secure password combining letters, numbers, and special characters to protect account integrity.</p>
-            <p>Verification is a standard requirement for all online casinos operating in regulated markets. Players need to submit identification documents such as a passport or driver's license, along with proof of address like a utility bill. This quick verification process typically completes within 24 hours and protects both the player and the platform from fraudulent activity.</p>
-            <p>The secure methods for identity confirmation include uploading documents directly through the account dashboard or sending them via email to the support team. Once verified, players gain full access to deposits, gameplay, and withdrawal requests.</p>
-            <h3>Account Recovery Tips</h3>
-            <p>Forgotten passwords happen to everyone. Players who cannot remember their queenwin login details can use the "Forgot Password" link on the login page. The system sends a reset link to the registered email address, allowing users to create a new password securely.</p>
-            <p>For locked accounts due to multiple failed login attempts, contacting customer support provides the fastest resolution. The support team verifies account ownership through security questions or identification checks before restoring access.</p>
-            <p>Best practices include using strong, unique passwords and storing login information in a secure password manager. Players should avoid sharing credentials and enable two-factor authentication where available. Support typically resolves password reset requests within minutes during business hours, ensuring minimal disruption to gaming plans.</p>
-        </section>
-
-        <section class="section" id="about">
-            <div class="section-header">
-                <h2 class="section-title">Casino Information</h2>
-            </div>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>📋 General Information</h3>
-                    <ul class="info-list">
-                        <li>
-                            <span class="info-label">Casino Name</span>
-                            <span class="info-value">spinobon casino</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Established</span>
-                            <span class="info-value">2026</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Website</span>
-                            <span class="info-value">spinobon.uk.com</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Support</span>
-                            <span class="info-value">24/7 Live Chat</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>💰 Withdrawal Limits</h3>
-                    <ul class="info-list">
-                        <li>
-                            <span class="info-label">Per Month</span>
-                            <span class="info-value">£30,000</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Per Week</span>
-                            <span class="info-value">£10,000</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Processing Time</span>
-                            <span class="info-value">24-48 hours</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Verification</span>
-                            <span class="info-value">Required</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>🎮 Games Available</h3>
-                    <ul class="info-list">
-                        <li>
-                            <span class="info-label">Slots</span>
-                            <span class="info-value check-icon">✅</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Roulette</span>
-                            <span class="info-value check-icon">✅</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Blackjack</span>
-                            <span class="info-value check-icon">✅</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Live Casino</span>
-                            <span class="info-value check-icon">✅</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>🌍 Language Options</h3>
-                    <ul class="info-list">
-                        <li>
-                            <span class="info-label">English Website</span>
-                            <span class="info-value check-icon">✅</span>
-                        </li>
-                        <li>
-                            <span class="info-label">English Support</span>
-                            <span class="info-value check-icon">✅</span>
-                        </li>
-                        <li>
-                            <span class="info-label">English Live Chat</span>
-                            <span class="info-value check-icon">✅</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Multi-language</span>
-                            <span class="info-value check-icon">✅</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section content-section" id="slots">
-            <h2>Game Variety & Software Providers</h2>
-            <p>queenwin Casino partners with leading software providers to deliver an extensive game library. The platform hosts hundreds of slot titles ranging from classic three-reel designs to modern video slots with complex bonus features and cinematic graphics.</p>
-            <p>Table game enthusiasts find multiple variants of roulette, blackjack, baccarat, and poker. Each game operates on certified Random Number Generator technology, ensuring fair outcomes that cannot be predicted or manipulated. Independent testing agencies regularly audit these systems to maintain integrity standards.</p>
-            <p>Progressive jackpot slots offer life-changing prize pools that grow with every wager across the network. These games attract players seeking substantial wins, though standard slots with fixed payouts remain equally popular for their frequent smaller victories.</p>
-            <p>The casino regularly updates its collection with new releases from top-tier developers. This commitment to fresh content keeps the gaming experience engaging for returning players while providing variety for newcomers exploring different themes and mechanics.</p>
-            <p>Key features of the game selection include:</p>
-            <ul>
-                <li>Over 500 slot titles with diverse themes and volatility levels</li>
-                <li>Classic table games with multiple betting limits</li>
-                <li>Progressive jackpot networks with substantial prize pools</li>
-                <li>Regular content updates featuring latest releases</li>
-                <li>Certified RNG technology for fair play assurance</li>
-            </ul>
-            <h3>Featured Live Dealer Tables</h3>
-            <p>The live casino section brings authentic gaming experiences to home screens. Professional croupiers host real-time games of live roulette, real-time blackjack, and various poker variants through high-definition video streams.</p>
-            <p>Interactive gaming features allow players to communicate with dealers and other participants through chat functions. The streaming quality remains stable across desktop and mobile devices, providing smooth gameplay without significant lag or connection issues.</p>
-            <p>Table limits accommodate both conservative players and high rollers. Minimum bets start at accessible levels for casual entertainment, while VIP tables accept substantial wagers for those seeking elevated stakes. Live dealer rooms operate on extended schedules, with many tables available around the clock to suit different time zones and playing preferences.</p>
-            <p>Device compatibility ensures players can access live tables from smartphones, tablets, and computers without sacrificing visual quality or functionality. The mobile-optimized interface maintains all features available on desktop versions.</p>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title">Top Casino Games</h2>
-            </div>
-            <div class="games-grid">
-                <div class="game-card">
-                    <div class="game-image"></div>
-                    <div class="game-title">Book of Ra</div>
-                </div>
-                <div class="game-card">
-                    <div class="game-image"></div>
-                    <div class="game-title">Starburst</div>
-                </div>
-                <div class="game-card">
-                    <div class="game-image"></div>
-                    <div class="game-title">Gonzo's Quest</div>
-                </div>
-                <div class="game-card">
-                    <div class="game-image"></div>
-                    <div class="game-title">Mega Moolah</div>
-                </div>
-                <div class="game-card">
-                    <div class="game-image"></div>
-                    <div class="game-title">Dead or Alive</div>
-                </div>
-                <div class="game-card">
-                    <div class="game-image"></div>
-                    <div class="game-title">Wolf Gold</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title">Game Providers</h2>
-            </div>
-            <div class="providers-grid">
-                <div class="provider-card">
-                    <div class="provider-logo">NetEnt</div>
-                </div>
-                <div class="provider-card">
-                    <div class="provider-logo">Microgaming</div>
-                </div>
-                <div class="provider-card">
-                    <div class="provider-logo">Pragmatic Play</div>
-                </div>
-                <div class="provider-card">
-                    <div class="provider-logo">Evolution</div>
-                </div>
-                <div class="provider-card">
-                    <div class="provider-logo">Play'n GO</div>
-                </div>
-                <div class="provider-card">
-                    <div class="provider-logo">Yggdrasil</div>
-                </div>
-                <div class="provider-card">
-                    <div class="provider-logo">Red Tiger</div>
-                </div>
-                <div class="provider-card">
-                    <div class="provider-logo">Big Time Gaming</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section content-section" id="bonuses">
-            <h2>queenwin Bonuses & Promotions</h2>
-            <p>queenwin bonuses include welcome packages designed to boost initial deposits with matched funds and free spins. New players receive promotional credits that extend gameplay time and increase winning opportunities without requiring additional deposits.</p>
-            <p>Reload promotions reward returning players with percentage matches on subsequent deposits. These offers appear regularly, often tied to specific days of the week or special events. Free spins promotions target popular slot titles, allowing players to test new games without risking personal funds.</p>
-            <p>Tournament structures add competitive elements where players compete for prize pools by achieving high scores or meeting specific wagering targets. These events create community engagement while offering additional winning potential beyond standard gameplay.</p>
-            <p>Understanding bonus terms prevents frustration during withdrawal attempts. Every promotion carries wagering requirements that specify how many times bonus funds must be played before becoming withdrawable cash. Game restrictions may limit which titles contribute to these requirements, with slots typically counting fully while table games contribute less.</p>
-            <p>Maximum bet limits apply during bonus play to prevent players from wagering large amounts that could quickly clear requirements. Exceeding these limits may void bonus funds and associated winnings, so careful attention to terms protects player interests.</p>
-            <p>Key bonus considerations include:</p>
-            <ul>
-                <li>Wagering requirements typically range from 35x to 50x the bonus amount</li>
-                <li>Game weightings affect contribution toward clearing requirements</li>
-                <li>Maximum bet restrictions during active bonus periods</li>
-                <li>Time limits for using bonus funds and meeting conditions</li>
-                <li>Withdrawal restrictions until requirements are satisfied</li>
-            </ul>
-            <h3>VIP & Loyalty Programs</h3>
-            <p>The VIP program rewards consistent gameplay through tiered membership levels. Players automatically enter the loyalty system upon registration, earning points for every wager placed across the platform.</p>
-            <p>Accumulated points determine tier progression, with each level unlocking enhanced benefits. Lower tiers provide basic perks like birthday bonuses and occasional free spins, while upper levels grant access to personal account managers, higher withdrawal limits, and invitations to exclusive events.</p>
-            <p>Private tables reserved for VIP members offer elevated betting limits and dedicated dealer attention. These exclusive experiences create premium gaming environments for high-volume players who generate substantial wagering activity.</p>
-            <p>Climbing through VIP tiers requires steady play over extended periods. The progression system transparently displays requirements for reaching each level, helping players understand what commitment is needed for specific rewards. While the system rewards loyalty, casual players should focus on entertainment value rather than chasing tier benefits that may require more activity than their budget comfortably allows.</p>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title">Bonuses & Promotions</h2>
-            </div>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>🎁 Welcome Bonus</h3>
-                    <p>New players receive promotional credits that extend gameplay time and increase winning opportunities. The welcome package is designed to boost initial deposits with matched funds and free spins.</p>
-                </div>
-                <div class="info-card">
-                    <h3>💎 VIP Program</h3>
-                    <p>Join our exclusive VIP program with personalized bonuses, faster withdrawals, and dedicated account managers. Access to personal account managers and higher withdrawal limits available.</p>
-                </div>
-                <div class="info-card">
-                    <h3>🔄 Weekly Cashback</h3>
-                    <p>Reload promotions reward returning players with percentage matches on subsequent deposits. These offers appear regularly, often tied to specific days of the week or special events.</p>
-                </div>
-                <div class="info-card">
-                    <h3>🎰 Slot Tournaments</h3>
-                    <p>Participate in exciting slot tournaments where players compete for prize pools by achieving high scores or meeting specific wagering targets.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section content-section" id="payments">
-            <h2>queenwin Payment and Withdrawal Methods</h2>
-            <p>queenwin payment and withdrawal methods encompass popular banking options that UK players regularly use. Deposit methods include major credit and debit cards, e-wallets like PayPal and Skrill, and direct bank transfers for those preferring traditional banking channels.</p>
-            <p>Security measures protect every transaction through SSL encryption technology. This military-grade protection ensures sensitive financial information travels securely between player devices and casino servers, preventing unauthorized access or data interception.</p>
-            <p>Processing times vary by method, with e-wallets offering the fastest completion. Deposits appear instantly in player accounts, allowing immediate gameplay. Withdrawals require verification steps and processing periods that differ between payment channels.</p>
-            <p>Maximum withdrawal limits apply based on account status and selected method. Standard accounts face daily and monthly caps, while VIP members enjoy elevated limits that accommodate larger cashout requests. The casino displays all relevant limits transparently in the banking section.</p>
-            <p>Fee structures remain competitive, with the casino absorbing most transaction costs. Players should verify with their payment providers whether any charges apply on the receiving end, as banks and e-wallet services occasionally impose their own fees.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Payment Method</th>
-                        <th>Deposit Time</th>
-                        <th>Withdrawal Time</th>
-                        <th>Minimum</th>
-                        <th>Maximum</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Credit/Debit Cards</td>
-                        <td>Instant</td>
-                        <td>3-5 business days</td>
-                        <td>£10</td>
-                        <td>£5,000</td>
-                    </tr>
-                    <tr>
-                        <td>PayPal</td>
-                        <td>Instant</td>
-                        <td>24 hours</td>
-                        <td>£10</td>
-                        <td>£10,000</td>
-                    </tr>
-                    <tr>
-                        <td>Skrill</td>
-                        <td>Instant</td>
-                        <td>24 hours</td>
-                        <td>£10</td>
-                        <td>£10,000</td>
-                    </tr>
-                    <tr>
-                        <td>Bank Transfer</td>
-                        <td>1-3 business days</td>
-                        <td>3-7 business days</td>
-                        <td>£20</td>
-                        <td>£20,000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h3>Transaction Speed & Verification</h3>
-            <p>E-wallets provide the fastest payout experiences, with most requests processed within 24 hours after approval. Bank transfers and card withdrawals take longer due to traditional banking infrastructure, typically completing within three to five business days.</p>
-            <p>The KYC process influences withdrawal timelines, particularly for first cashout requests. Players who complete verification immediately after registration avoid delays when requesting withdrawals. Unverified accounts face holds until documentation is submitted and reviewed.</p>
-            <p>Expediting the process requires keeping documents current and ensuring all account information matches identification papers exactly. Discrepancies between registered details and submitted documents trigger additional review periods, extending approval times.</p>
-            <p>Realistic expectations help manage withdrawal experiences. While e-wallets offer quick processing, players should account for verification periods and banking hours when estimating actual receipt times. Weekend requests may experience slight delays as financial institutions operate on reduced schedules.</p>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title">Payment Methods</h2>
-            </div>
-            <div class="info-card">
-                <h3>💳 Accepted Payment Options</h3>
-                <div class="payment-methods">
-                    <div class="payment-badge">💳 Visa</div>
-                    <div class="payment-badge">💳 Mastercard</div>
-                    <div class="payment-badge">🏦 Bank Transfer</div>
-                    <div class="payment-badge">💰 Skrill</div>
-                    <div class="payment-badge">💰 Neteller</div>
-                    <div class="payment-badge">💰 PayPal</div>
-                    <div class="payment-badge">💰 Paysafecard</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section content-section">
-            <h2>Security & Responsible Gaming</h2>
-            <p>queenwin Casino maintains strict security protocols to protect player information and funds. Advanced encryption technology secures all data transmissions, making it extremely difficult for unauthorized parties to intercept sensitive details like passwords or payment information.</p>
-            <p>The platform operates under proper licensing from respected gambling authorities. These regulators impose rigorous standards covering fair play, financial transparency, and player protection. Regular audits ensure ongoing compliance with all regulatory requirements.</p>
-            <p>Responsible gaming initiatives form a core part of the casino's operational philosophy. Players can set deposit limits that restrict how much money they can add to their accounts within specified timeframes. These controls help maintain budgets and prevent overspending during gaming sessions.</p>
-            <p>Self-exclusion options allow players to temporarily or permanently close their accounts if gambling becomes problematic. The casino honors these requests immediately and provides resources for professional support organizations specializing in gambling-related concerns.</p>
-            <p>Additional responsible gaming features include:</p>
-            <ul>
-                <li>Reality checks that display session duration and spending</li>
-                <li>Loss limits to cap potential losses over set periods</li>
-                <li>Time-out options for short-term breaks from gambling</li>
-                <li>Access to support resources and helpline information</li>
-                <li>Age verification systems to prevent underage gambling</li>
-            </ul>
-            <p>Trusting personal information and credit card data to any online platform requires confidence in their security measures. queenwin Casino invests heavily in infrastructure and protocols that meet industry-leading standards, providing players with assurance that their sensitive information remains protected throughout their gaming experience.</p>
-        </section>
-
-        <section class="section content-section">
-            <h2>Customer Support & Troubleshooting</h2>
-            <p>The support team operates through multiple channels to address player questions and technical issues. Live chat provides instant connections to trained representatives during peak hours, offering real-time assistance for urgent concerns like payment problems or game errors.</p>
-            <p>Email support accommodates less time-sensitive inquiries with detailed responses that address complex questions. Response times for email typically range from a few hours to one business day, depending on inquiry volume and complexity.</p>
-            <p>Phone support offers direct voice communication for players who prefer speaking with representatives. This channel suits situations requiring detailed explanations or step-by-step guidance through technical processes.</p>
-            <p>Common issues like password recovery follow straightforward resolution procedures. Players accessing the "How do I contact queenwin customer support?" section of the help center find contact options and self-service resources for frequent questions. The knowledge base includes articles covering account management, payment procedures, and game rules.</p>
-            <p>Service response times remain competitive within the industry. Live chat inquiries receive acknowledgment within minutes, while email responses arrive within reasonable timeframes. The support team undergoes regular training to maintain knowledge of platform features and gaming products.</p>
-            <p>Technical game errors trigger specific troubleshooting protocols. Players experiencing crashed sessions or disappeared balances should immediately document the issue with screenshots and contact support with detailed descriptions. The casino maintains comprehensive logs that help identify and resolve technical problems while protecting player funds.</p>
-        </section>
-
-        <section class="section content-section">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>Is queenwin Casino available in the UK?</h3>
-                <p>queenwin Casino operates legally in the UK under proper licensing and accepts registrations from UK residents. The platform complies with all regulatory requirements for UK online gambling operations.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Does queenwin Casino offer free spins?</h3>
-                <p>Free spins promotions appear regularly at queenwin Casino, both as part of welcome packages for new players and ongoing offers for existing members. These promotions target popular slot titles and carry specific terms regarding wagering requirements and eligible games.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What are the withdrawal methods for queenwin Casino?</h3>
-                <p>Withdrawal options include e-wallets like PayPal and Skrill, credit and debit cards, and bank transfers. Processing times vary by method, with e-wallets offering the fastest payouts typically within 24 hours after approval.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How can I join queenwin Casino VIP program?</h3>
-                <p>Players automatically enter the loyalty program upon registration. Progressing through VIP tiers requires accumulating points through regular gameplay. Higher tiers unlock through sustained wagering activity over time, with specific point thresholds displayed in the VIP section.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do I reset my queenwin Casino password?</h3>
-                <p>Password resets begin at the login page by clicking the "Forgot Password" link. The system sends a reset link to the registered email address. Following the link allows creation of a new secure password for account access.</p>
-            </div>
-        </section>
-
-        <section class="section content-section">
-            <h2>Conclusion & Final Thoughts</h2>
-            <p>queenwin Casino delivers a comprehensive gaming platform that addresses the key concerns UK players have when choosing an online casino. The combination of diverse game selection, transparent bonus structures, and secure banking creates a trustworthy environment for both new and experienced players.</p>
-            <p>The platform's commitment to responsible gaming and player protection demonstrates serious attention to industry best practices. Licensing requirements and security measures provide assurance that personal information and funds remain protected throughout the gaming experience.</p>
-            <p>VIP benefits reward loyal players with enhanced perks, while the standard experience offers sufficient quality for casual entertainment. Payment processing maintains competitive speeds, and customer support channels remain accessible for resolving questions or technical issues.</p>
-            <p>Players should approach any gaming platform with realistic expectations. Understanding bonus terms, setting personal limits, and viewing gambling as entertainment rather than income generation creates healthy relationships with online casinos. queenwin Casino provides the tools and transparency needed for informed decision-making.</p>
-            <p>The combination of game variety, secure gaming infrastructure, and attentive customer service positions this platform as a viable option for UK players seeking reliable online casino entertainment. Those interested in exploring what the casino offers can register easily and begin with welcome bonuses designed to extend initial gameplay sessions.</p>
-        </section>
-
-        <section class="cta-section">
-            <h2>Ready to Play at queenwin Casino?</h2>
-            <p>Join thousands of players and start your gaming journey today with generous welcome bonuses!</p>
-            <a href="https://afflink.com?utm-source-test=teeeest" class="hero-cta" rel="nofollow noopener" target="_blank">JOIN NOW & GET BONUS</a>
-        </section>
-
+    <div id="mobileMenu" class="hidden bg-black text-white p-4 border-t border-gray-800 md:hidden">
+        <input type="text" placeholder="Start here..." class="bg-white text-black px-3 py-2 text-sm w-full mb-2 outline-none">
+        <a href="https://afflink.com?utm-source-test=teeeest" class="block w-full bg-[#8b0000] py-2 font-bold text-center">Search</a>
     </div>
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About spinobon casino</h3>
-                    <p>spinobon casino is a premier online gaming destination established in 2026, offering a vast selection of slots, live casino games, and secure payment methods with 24/7 customer support.</p>
-                    <div class="footer-badges">
-                        <div class="footer-badge">🔞 18+</div>
-                        <div class="footer-badge">🔒 SSL Secure</div>
-                        <div class="footer-badge">✅ Licensed</div>
-                    </div>
+    <main class="bg-white min-h-screen">
+        <div class="max-w-6xl mx-auto px-4 md:px-12 py-8">
+            <div class="flex border-b border-gray-300 mb-10 relative">
+                <div class="flex -mb-[1px]">
+                    <div class="border border-gray-300 px-5 py-1 text-sm tab-active cursor-default">View</div>
+                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-5 py-1 text-sm tab-inactive cursor-pointer transition-colors">Play Now</a>
                 </div>
-                <div class="footer-section">
-                    <h3>Responsible Gaming</h3>
-                    <p>We are committed to responsible gambling. Set your limits, play responsibly, and seek help if gambling becomes a problem.</p>
-                    <div class="footer-badges">
-                        <div class="footer-badge">BeGambleAware</div>
-                        <div class="footer-badge">GamCare</div>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>Our support team is available 24/7 to assist you with any questions or concerns.</p>
-                    <p style="margin-top: 15px;"><strong>Email:</strong> support@spinobon.uk.com</p>
-                    <p><strong>Live Chat:</strong> Available 24/7</p>
+                <div class="ml-auto flex items-center pb-2">
+                    <i data-lucide="layout-grid" class="w-5 h-5 text-teal-600"></i>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="disclaimer">
-                    <p><strong>Disclaimer:</strong> Gambling can be addictive. Play responsibly. This website is intended for users aged 18 and over. spinobon casino operates under strict regulatory oversight and promotes responsible gambling. The games on this site are intended for entertainment purposes only. Please check your local laws to ensure online gambling is legal in your jurisdiction before playing. We are not responsible for any losses incurred from gambling activities.</p>
+
+            <div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-8">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Spinobon Casino: Your One-Stop Destination for Online Bingo and Slots</h1>
+                    <div class="space-y-1">
+                        <p class="text-sm">Verified Brand: <a href="https://afflink.com?utm-source-test=teeeest" class="text-[#8b0000] hover:underline font-bold">spinobon casino</a></p>
+                        <p class="text-sm text-gray-800">Domain: <span class="font-bold">spinobon.uk.com</span></p>
+                    </div>
                 </div>
-                <p>&copy; 2026 spinobon casino - spinobon.uk.com. All rights reserved.</p>
+                <div class="w-full md:w-56 h-56 border border-red-900 overflow-hidden shadow-sm prefix-viz"></div>
+            </div>
+
+            <div class="flex border-b border-gray-300 mb-8 overflow-x-auto whitespace-nowrap">
+                <div class="flex -mb-[1px]">
+                    <div class="border border-gray-300 px-4 py-1.5 text-sm bg-white font-bold">Overview</div>
+                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-4 py-1.5 text-sm tab-inactive cursor-pointer">Connectivity</a>
+                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-4 py-1.5 text-sm tab-inactive cursor-pointer">Whois</a>
+                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-4 py-1.5 text-sm tab-inactive cursor-pointer">DNS</a>
+                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-4 py-1.5 text-sm tab-inactive cursor-pointer">Validation</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-24 mb-12">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Platform Status</h3>
+                        <p class="font-bold text-lg">Active, Secure <span class="text-gray-400 font-normal text-base">(UK Region)</span></p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Game Categories</h3>
+                        <p class="font-bold text-lg">Bingo, Slots, Live Rooms</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Payout Speed</h3>
+                        <p class="font-bold text-lg">24-48 Hours</p>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-sm text-gray-500 mb-1">Registered to</h3>
+                        <p class="mb-1"><a href="https://afflink.com?utm-source-test=teeeest" class="text-[#8b0000] font-bold underline text-lg">spinobon.uk.com</a> <span class="text-gray-400">(uk)</span></p>
+                        <p><a href="https://afflink.com?utm-source-test=teeeest" class="text-[#8b0000] text-sm font-medium hover:underline">[Official Registration]</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-area border-t border-gray-200 pt-8">
+                <h2>Welcome to Spinobon Casino</h2>
+
+<p>Spinobon Casino offers a welcoming space for players who love bingo and slot games. The platform combines a user-friendly interface with a straightforward sign-up process. Players can enjoy various bingo rooms and slot titles in a secure environment.</p>
+
+<p>This friendly site prioritizes transparency and fair gameplay. Spinobon Casino uses reliable payment methods to ensure smooth transactions. The platform focuses on building trust through clear rules and honest communication with its community.</p>
+
+<p>New players find the registration process quick and hassle-free. The casino provides detailed information about bonuses, game rules, and payout procedures. This approach helps users feel confident about their gaming choices from the start.</p>
+
+<h2>Why Choose Spinobon Casino</h2>
+
+<p>Spinobon Casino stands out for several compelling reasons. The platform delivers an impressive collection of bingo categories and slot games. Players benefit from reliable customer support and transparent bonus offers that enhance their gaming experience.</p>
+
+<p>The casino maintains high standards for fair gameplay and quick payouts. User reviews consistently highlight the platform's commitment to processing withdrawals promptly. This great site addresses common concerns about delayed payments and hidden fees.</p>
+
+<p>Key benefits include:</p>
+
+<ul>
+<li>Easy account creation and verification</li>
+<li>Diverse bingo rooms with various ticket prices</li>
+<li>Extensive slot collections featuring popular themes</li>
+<li>Clear bonus terms without confusing requirements</li>
+<li>Responsive customer service team</li>
+<li>No deposit bonus opportunities for new players</li>
+</ul>
+
+<h3>Simple Steps to Start Playing</h3>
+
+<p>The spinobon login process takes just minutes to complete. New users click the registration button and provide basic information such as email address and preferred username. The system guides players through each step clearly.</p>
+
+<p>Account verification happens quickly through email confirmation. Players can then make their first deposit and start exploring games immediately. The platform protects personal data with modern encryption technology.</p>
+
+<p>Returning players access their accounts through the spinobon login portal. The system remembers credentials securely, making future visits even faster. Company details are readily available for users who want additional information about licensing and operations.</p>
+
+<h2>Reliable Deposits and Fast Cash-Outs</h2>
+
+<p>Understanding spinobon payment and withdrawal methods helps players manage their funds effectively. The casino supports multiple payment options to accommodate different preferences. Common methods include credit cards, e-wallets, and bank transfers.</p>
+
+<p>Deposit processing typically happens instantly, allowing players to start gaming right away. Spinobon payment methods use secure connections to protect financial information. The platform displays all available options clearly during the transaction process.</p>
+
+<p>Withdrawal requests receive prompt attention from the finance team. Most payout methods process within 24 to 48 hours, depending on the chosen option. The casino maintains transparent terms about any minimum withdrawal amounts or processing fees.</p>
+
+<div class="overflow-x-auto">
+<table>
+<tr>
+<th>Payment Method</th>
+<th>Deposit Time</th>
+<th>Withdrawal Time</th>
+</tr>
+<tr>
+<td>Credit/Debit Cards</td>
+<td>Instant</td>
+<td>3-5 business days</td>
+</tr>
+<tr>
+<td>E-Wallets</td>
+<td>Instant</td>
+<td>24-48 hours</td>
+</tr>
+<tr>
+<td>Bank Transfer</td>
+<td>1-3 business days</td>
+<td>3-7 business days</td>
+</tr>
+</table>
+</div>
+
+<p>Fast withdrawals make the gaming experience stress-free. Players appreciate knowing exactly when to expect their winnings. This transparency builds trust and encourages long-term relationships with the platform.</p>
+
+<h3>Access Exciting Offers</h3>
+
+<p>Spinobon bonuses add extra value to the gaming experience. New players often qualify for welcome packages that include bonus funds or free bingo tickets. The casino explains spinobon bonuses for bingo in simple terms that anyone can understand.</p>
+
+<p>Regular players benefit from loyalty programs and seasonal promotions. These offers might include reload bonuses, cashback deals, or special tournament entries. The no deposit bonus option lets newcomers try games without risking their own money first.</p>
+
+<p>Wagering requirements are stated clearly for each promotion. Players know exactly what conditions apply before claiming any bonus. This honest approach prevents surprises and helps users make informed decisions about which offers suit their playing style.</p>
+
+<h2>Explore Engaging Bingo Rooms and Slots</h2>
+
+<p>The bingo categories at this casino cater to different preferences and budgets. Players find rooms with low-stakes tickets for casual fun and higher-value games for bigger prizes. Each room displays ticket prices, jackpot amounts, and game schedules clearly.</p>
+
+<p>Popular bingo variations include 75-ball, 90-ball, and speed bingo. The platform updates its selection regularly to keep gameplay fresh and exciting. Chat features in bingo rooms let players socialize while waiting for numbers to be called.</p>
+
+<p>Slot collections feature hundreds of titles with diverse themes. Players enjoy classic fruit machines, adventure-themed slots, and progressive jackpot games. The casino partners with reputable game developers to ensure quality graphics and fair random number generation.</p>
+
+<p>Game categories are organized for easy browsing:</p>
+
+<ul>
+<li>Classic slots with traditional symbols</li>
+<li>Video slots with bonus rounds and free spins</li>
+<li>Progressive jackpot slots with growing prizes</li>
+<li>Branded slots based on popular themes</li>
+<li>New releases updated monthly</li>
+</ul>
+
+<h3>Connect with Fellow Players</h3>
+
+<p>This friendly site encourages social interaction among its members. Bingo rooms include chat moderators who facilitate conversations and run mini-games between rounds. Players often form friendships through regular participation in their favorite rooms.</p>
+
+<p>The platform hosts special community events like themed nights and tournament competitions. These activities bring players together and create a sense of belonging. Social gaming features make the experience more enjoyable than playing alone.</p>
+
+<p>Tournament leaderboards display top performers and create friendly competition. Players can share achievements and celebrate wins together. This interactive atmosphere keeps members engaged and coming back regularly.</p>
+
+<h2>Play Securely at Spinobon Casino</h2>
+
+<p>Security measures protect players throughout their gaming journey. The platform uses SSL encryption to safeguard personal and financial data. Regular audits ensure that games operate fairly and random number generators function properly.</p>
+
+<p>Many players ask "is spinobon safe" before registering. The casino holds proper licensing and follows industry regulations for responsible gambling. These credentials provide reassurance about the platform's legitimacy and commitment to player protection.</p>
+
+<p>Responsible gambling tools help users maintain healthy gaming habits. Players can set deposit limits, loss limits, or take temporary breaks from their accounts. The casino provides links to support organizations for anyone experiencing gambling difficulties.</p>
+
+<p>Trustpilot reviews and independent ratings offer additional perspectives on the casino's reputation. The platform welcomes feedback and addresses concerns promptly. This open approach demonstrates confidence in service quality and fair play standards.</p>
+
+<h2>What Players Say and Final Thoughts</h2>
+
+<p>Spinobon real user feedback highlights several strengths of the platform. Players frequently praise the variety of games, straightforward bonus terms, and responsive customer support. The fast payout process receives particular appreciation in many reviews.</p>
+
+<p>Some users mention that peak hours can make popular bingo rooms crowded. However, the casino offers enough room variety that players can always find available seats. The balance between game selection and community atmosphere creates an enjoyable environment.</p>
+
+<p>User reviews consistently mention the friendly atmosphere and helpful chat moderators. Players value the transparent communication about rules, bonuses, and payment processing. These factors contribute to high satisfaction rates among regular members.</p>
+
+<p>Spinobon Casino delivers a solid gaming experience for bingo and slot enthusiasts. The platform combines diverse entertainment options with reliable payment methods and genuine community features. Players seeking a trustworthy casino with clear policies will find this site meets their expectations well.</p>
             </div>
         </div>
-    </footer>
+    </main>
 
+    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 flex justify-between items-center z-50 shadow-2xl">
+        <p class="text-sm">This site uses cookies to provide technical features. By continuing, you agree to our use of cookies.</p>
+        <button onclick="document.getElementById('cookieBanner').style.display='none'" class="bg-[#8b0000] px-4 py-1 text-sm font-bold hover:bg-red-700">Dismiss</button>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        function toggleMobileMenu(){
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        document.getElementById('searchInput').addEventListener('keypress', function(e){
+            if(e.key === 'Enter'){
+                window.location.href = "https://afflink.com?utm-source-test=teeeest";
+            }
+        });
+        const tabs = document.querySelectorAll('.tab-inactive');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                window.location.href = "https://afflink.com?utm-source-test=teeeest";
+            });
+        });
+    </script>
 </body>
 </html>
