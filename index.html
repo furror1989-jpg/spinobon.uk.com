@@ -1,272 +1,528 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinobon Casino – Bingo, Slots, and Secure Payouts</title>
-    <meta name="description" content="Explore Spinobon Casino's games, bonuses, payment methods, and community features. Learn how to register, claim promotions, and enjoy a safe environment.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Explore Spinobon Casino's games, bonuses, payment methods, and community features. Enjoy a safe, friendly environment for playing bingo and slots.">
+    <link rel="canonical" href="https://spinobon.uk.com" />
+    <link rel="alternate" hreflang="uk" href="https://spinobon.uk.com" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GamblingService",
+      "name": "Spinobon Casino",
+      "url": "https://spinobon.uk.com",
+      "description": "Explore Spinobon Casino's games, bonuses, payment methods, and community features. Learn how to register, claim promotions, and enjoy a safe environment.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Spinobon Casino"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "250 Free Spins + 100% bonus for first 2 deposits",
+        "url": "https://afflink.com?utm-source-test=teeeest"
+      }
+    }
+    </script>
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6 }
-        .tab-active { background-color: white; border-bottom: 1px solid white; z-index: 10; font-weight: 700 }
-        .tab-inactive { background-color: #f9fafb; color: #8b0000 }
-        .tab-inactive:hover { background-color: white }
-        .prefix-viz { 
-            background-image: url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=300&q=80'); 
-            background-size: cover; 
-            image-rendering: pixelated; 
-            filter: contrast(150%) brightness(50%) hue-rotate(180deg); 
-            animation: pulse 4s infinite alternate 
+        :root {
+            --bg-dark: #120107;
+            --card-bg: #4a0422;
+            --accent-yellow: #f8e71c;
+            --text-white: #ffffff;
+            --text-gray: #b1b1b1;
+            --btn-dark: #3a2e32;
         }
-        @keyframes pulse { from { opacity: 0.8 } to { opacity: 1 } }
-        .content-area h2 { font-size: 1.875rem; font-weight: 900; margin-top: 2rem; margin-bottom: 1rem; color: #111827; letter-spacing: -0.025em; }
-        .content-area h3 { font-size: 1.5rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #111827; }
-        .content-area p { margin-bottom: 1.25rem; line-height: 1.625; color: #374151; }
-        .content-area ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem; }
-        .content-area li { margin-bottom: 0.5rem; color: #374151; }
-        .content-area table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.875rem; }
-        .content-area th { background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; font-weight: 700; }
-        .content-area td { border: 1px solid #e5e7eb; padding: 0.75rem; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.5;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: var(--accent-yellow);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--text-white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .header-btns {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-login {
+            background: var(--btn-dark);
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .btn-signup {
+            background: var(--accent-yellow);
+            color: black;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Banner Section */
+        .banners {
+            display: flex;
+            gap: 20px;
+            padding: 30px 50px;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .banners::-webkit-scrollbar { display: none; }
+
+        .banner-card {
+            min-width: 300px;
+            flex: 1;
+            height: 200px;
+            background: linear-gradient(135deg, #70062f 0%, #3e031c 100%);
+            border-radius: 20px;
+            padding: 25px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .banner-card h3 { margin: 0; font-size: 14px; color: var(--text-gray); }
+        .banner-card p { font-size: 20px; font-weight: bold; max-width: 200px; margin: 10px 0; }
+        .banner-card a { color: #ff3b8d; text-decoration: none; font-size: 12px; font-weight: bold; }
+
+        /* Game Sections */
+        .h1-title {
+            text-align: center;
+            font-size: 32px;
+            margin: 40px 20px 10px;
+            color: var(--text-white);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin: 40px 0 20px;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            padding: 0 50px;
+        }
+
+        .game-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s;
+        }
+
+        .game-card:hover { transform: translateY(-5px); }
+
+        .game-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 5px;
+        }
+
+        .icon-circle {
+            width: 24px;
+            height: 24px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .game-info {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 10px;
+            text-align: center;
+        }
+
+        .game-name { font-weight: bold; font-size: 14px; }
+        .provider { font-size: 10px; color: var(--text-gray); text-transform: uppercase; }
+
+        .center-btn-wrap {
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+        }
+
+        .btn-more {
+            background: var(--accent-yellow);
+            color: black;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Footer Text Block */
+        .footer-text {
+            background-color: rgba(255, 255, 255, 0.05);
+            margin: 50px;
+            padding: 40px;
+            border-radius: 20px;
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-text h2 { color: white; margin-top: 30px; margin-bottom: 15px; }
+        .footer-text h3 { color: white; margin-top: 25px; }
+        .footer-text p { margin-bottom: 15px; }
+        .footer-text ul { padding-left: 20px; margin-bottom: 20px; }
+        .footer-text li { margin-bottom: 8px; }
+
+        /* Table Styling */
+        .table-container {
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            color: var(--text-white);
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        th {
+            background-color: var(--card-bg);
+            color: var(--accent-yellow);
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        /* Floating Bonus Notification */
+        .floating-bonus {
+            position: fixed;
+            top: 80px;
+            right: 50px;
+            background: #e91e63;
+            padding: 15px;
+            border-radius: 15px;
+            width: 220px;
+            z-index: 100;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .bg-img { background-color: #333; background-image: linear-gradient(45deg, #333, #555); }
+
+        @media (max-width: 768px) {
+            header { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            nav { display: none; }
+            .banners { padding: 20px; }
+            .game-grid { padding: 0 20px; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+            .footer-text { margin: 20px; padding: 20px; }
+            .floating-bonus { display: none; }
+            .h1-title { font-size: 24px; }
+        }
     </style>
 </head>
-<body class="text-gray-900">
-    <header class="bg-black text-white h-12 flex items-center justify-between sticky top-0 z-50 px-4 md:px-0">
-        <div class="max-w-6xl mx-auto w-full flex items-center justify-between h-full">
-            <div class="flex items-center gap-4 md:gap-8 flex-1">
-                <a href="https://afflink.com?utm-source-test=teeeest" class="flex items-center font-black text-lg cursor-pointer">
-                    <i data-lucide="activity" class="w-6 h-6 mr-1 text-white"></i>
-                    <span>Spinobon Casino</span>
-                </a>
-                <div class="hidden md:flex items-center flex-1 max-w-xl">
-                    <input type="text" placeholder="Search games or bonuses..." class="bg-white text-black px-3 py-1 text-sm w-full outline-none border-none" id="searchInput">
-                    <a href="https://afflink.com?utm-source-test=teeeest" class="bg-[#8b0000] hover:bg-red-700 transition-colors p-1 px-3 flex items-center justify-center">
-                        <i data-lucide="arrow-right" class="w-4 h-4 text-white"></i>
-                    </a>
-                </div>
-                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-            <div class="h-full flex items-center">
-                <a href="https://afflink.com?utm-source-test=teeeest" class="bg-[#8b0000] h-full flex items-center px-6 cursor-pointer hover:bg-red-700 transition-colors">
-                    <span class="text-sm font-bold">Login</span>
-                </a>
-            </div>
+<body>
+
+    <header>
+        <a href="https://afflink.com?utm-source-test=teeeest" class="logo">S SPINBON</a>
+        <nav>
+            <a href="https://afflink.com?utm-source-test=teeeest">Login & Registration</a>
+            <a href="https://afflink.com?utm-source-test=teeeest">Application</a>
+            <a href="https://afflink.com?utm-source-test=teeeest">Bonuses</a>
+        </nav>
+        <div class="header-btns">
+            <a href="https://afflink.com?utm-source-test=teeeest" class="btn-login">Login</a>
+            <a href="https://afflink.com?utm-source-test=teeeest" class="btn-signup">Sign up</a>
+            <span style="font-size: 20px; cursor:pointer;" onclick="window.location.href='https://afflink.com?utm-source-test=teeeest'">🎧</span>
         </div>
     </header>
 
-    <div id="mobileMenu" class="hidden bg-black text-white p-4 border-t border-gray-800 md:hidden">
-        <input type="text" placeholder="Start here..." class="bg-white text-black px-3 py-2 text-sm w-full mb-2 outline-none">
-        <a href="https://afflink.com?utm-source-test=teeeest" class="block w-full bg-[#8b0000] py-2 font-bold text-center">Search</a>
-    </div>
+    <!-- Floating Banner -->
+    <a href="https://afflink.com?utm-source-test=teeeest" class="floating-bonus">
+        <div style="font-size: 30px;">🎁</div>
+        <div style="font-size: 11px;">
+            <b>Casino bonus</b><br>
+            250 Free Spins + 100% bonus for first 2 deposits
+        </div>
+    </a>
 
-    <main class="bg-white min-h-screen">
-        <div class="max-w-6xl mx-auto px-4 md:px-12 py-8">
-            <div class="flex border-b border-gray-300 mb-10 relative">
-                <div class="flex -mb-[1px]">
-                    <div class="border border-gray-300 px-5 py-1 text-sm tab-active cursor-default">View</div>
-                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-5 py-1 text-sm tab-inactive cursor-pointer transition-colors">Play Now</a>
-                </div>
-                <div class="ml-auto flex items-center pb-2">
-                    <i data-lucide="layout-grid" class="w-5 h-5 text-teal-600"></i>
-                </div>
+    <main>
+        <h1 class="h1-title">Spinobon Casino: Your One-Stop Destination for Online Bingo and Slots</h1>
+
+        <!-- Banners -->
+        <section class="banners">
+            <div class="banner-card">
+                <h3>Welcome bonus</h3>
+                <p>250 Free Spins + 100% bonus for the first 2 deposits</p>
+                <a href="https://afflink.com?utm-source-test=teeeest">Tell me more →</a>
             </div>
-
-            <div class="flex flex-col md:flex-row justify-between items-start mb-12 gap-8">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-black mb-4 tracking-tight">Spinobon Casino: Your One-Stop Destination for Online Bingo and Slots</h1>
-                    <div class="space-y-1">
-                        <p class="text-sm">Verified Brand: <a href="https://afflink.com?utm-source-test=teeeest" class="text-[#8b0000] hover:underline font-bold">spinobon casino</a></p>
-                        <p class="text-sm text-gray-800">Domain: <span class="font-bold">spinobon.uk.com</span></p>
-                    </div>
-                </div>
-                <div class="w-full md:w-56 h-56 border border-red-900 overflow-hidden shadow-sm prefix-viz"></div>
+            <div class="banner-card">
+                <h3>Regular bonuses</h3>
+                <p>Grab up to 75 Free Spins + 30% bonus</p>
+                <a href="https://afflink.com?utm-source-test=teeeest">Tell me more →</a>
             </div>
-
-            <div class="flex border-b border-gray-300 mb-8 overflow-x-auto whitespace-nowrap">
-                <div class="flex -mb-[1px]">
-                    <div class="border border-gray-300 px-4 py-1.5 text-sm bg-white font-bold">Overview</div>
-                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-4 py-1.5 text-sm tab-inactive cursor-pointer">Connectivity</a>
-                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-4 py-1.5 text-sm tab-inactive cursor-pointer">Whois</a>
-                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-4 py-1.5 text-sm tab-inactive cursor-pointer">DNS</a>
-                    <a href="https://afflink.com?utm-source-test=teeeest" class="border border-gray-300 border-l-0 px-4 py-1.5 text-sm tab-inactive cursor-pointer">Validation</a>
-                </div>
+            <div class="banner-card">
+                <h3>Cashback</h3>
+                <p>Up to 20% cashback every week</p>
+                <a href="https://afflink.com?utm-source-test=teeeest">Tell me more →</a>
             </div>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-24 mb-12">
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-sm text-gray-500 mb-1">Platform Status</h3>
-                        <p class="font-bold text-lg">Active, Secure <span class="text-gray-400 font-normal text-base">(UK Region)</span></p>
-                    </div>
-                    <div>
-                        <h3 class="text-sm text-gray-500 mb-1">Game Categories</h3>
-                        <p class="font-bold text-lg">Bingo, Slots, Live Rooms</p>
-                    </div>
-                    <div>
-                        <h3 class="text-sm text-gray-500 mb-1">Payout Speed</h3>
-                        <p class="font-bold text-lg">24-48 Hours</p>
-                    </div>
-                </div>
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-sm text-gray-500 mb-1">Registered to</h3>
-                        <p class="mb-1"><a href="https://afflink.com?utm-source-test=teeeest" class="text-[#8b0000] font-bold underline text-lg">spinobon.uk.com</a> <span class="text-gray-400">(uk)</span></p>
-                        <p><a href="https://afflink.com?utm-source-test=teeeest" class="text-[#8b0000] text-sm font-medium hover:underline">[Official Registration]</a></p>
-                    </div>
-                </div>
+        <!-- Casino Section -->
+        <h2 class="section-title">Casino</h2>
+        <div class="game-grid">
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💎</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">3 COIN VOLCANOES</div><div class="provider">BOOONGO</div></div>
             </div>
-
-            <div class="content-area border-t border-gray-200 pt-8">
-                <h2>Welcome to Spinobon Casino</h2>
-
-<p>Spinobon Casino offers a welcoming space for players who love bingo and slot games. The platform combines a user-friendly interface with a straightforward sign-up process. Players can enjoy various bingo rooms and slot titles in a secure environment.</p>
-
-<p>This friendly site prioritizes transparency and fair gameplay. Spinobon Casino uses reliable payment methods to ensure smooth transactions. The platform focuses on building trust through clear rules and honest communication with its community.</p>
-
-<p>New players find the registration process quick and hassle-free. The casino provides detailed information about bonuses, game rules, and payout procedures. This approach helps users feel confident about their gaming choices from the start.</p>
-
-<h2>Why Choose Spinobon Casino</h2>
-
-<p>Spinobon Casino stands out for several compelling reasons. The platform delivers an impressive collection of bingo categories and slot games. Players benefit from reliable customer support and transparent bonus offers that enhance their gaming experience.</p>
-
-<p>The casino maintains high standards for fair gameplay and quick payouts. User reviews consistently highlight the platform's commitment to processing withdrawals promptly. This great site addresses common concerns about delayed payments and hidden fees.</p>
-
-<p>Key benefits include:</p>
-
-<ul>
-<li>Easy account creation and verification</li>
-<li>Diverse bingo rooms with various ticket prices</li>
-<li>Extensive slot collections featuring popular themes</li>
-<li>Clear bonus terms without confusing requirements</li>
-<li>Responsive customer service team</li>
-<li>No deposit bonus opportunities for new players</li>
-</ul>
-
-<h3>Simple Steps to Start Playing</h3>
-
-<p>The spinobon login process takes just minutes to complete. New users click the registration button and provide basic information such as email address and preferred username. The system guides players through each step clearly.</p>
-
-<p>Account verification happens quickly through email confirmation. Players can then make their first deposit and start exploring games immediately. The platform protects personal data with modern encryption technology.</p>
-
-<p>Returning players access their accounts through the spinobon login portal. The system remembers credentials securely, making future visits even faster. Company details are readily available for users who want additional information about licensing and operations.</p>
-
-<h2>Reliable Deposits and Fast Cash-Outs</h2>
-
-<p>Understanding spinobon payment and withdrawal methods helps players manage their funds effectively. The casino supports multiple payment options to accommodate different preferences. Common methods include credit cards, e-wallets, and bank transfers.</p>
-
-<p>Deposit processing typically happens instantly, allowing players to start gaming right away. Spinobon payment methods use secure connections to protect financial information. The platform displays all available options clearly during the transaction process.</p>
-
-<p>Withdrawal requests receive prompt attention from the finance team. Most payout methods process within 24 to 48 hours, depending on the chosen option. The casino maintains transparent terms about any minimum withdrawal amounts or processing fees.</p>
-
-<div class="overflow-x-auto">
-<table>
-<tr>
-<th>Payment Method</th>
-<th>Deposit Time</th>
-<th>Withdrawal Time</th>
-</tr>
-<tr>
-<td>Credit/Debit Cards</td>
-<td>Instant</td>
-<td>3-5 business days</td>
-</tr>
-<tr>
-<td>E-Wallets</td>
-<td>Instant</td>
-<td>24-48 hours</td>
-</tr>
-<tr>
-<td>Bank Transfer</td>
-<td>1-3 business days</td>
-<td>3-7 business days</td>
-</tr>
-</table>
-</div>
-
-<p>Fast withdrawals make the gaming experience stress-free. Players appreciate knowing exactly when to expect their winnings. This transparency builds trust and encourages long-term relationships with the platform.</p>
-
-<h3>Access Exciting Offers</h3>
-
-<p>Spinobon bonuses add extra value to the gaming experience. New players often qualify for welcome packages that include bonus funds or free bingo tickets. The casino explains spinobon bonuses for bingo in simple terms that anyone can understand.</p>
-
-<p>Regular players benefit from loyalty programs and seasonal promotions. These offers might include reload bonuses, cashback deals, or special tournament entries. The no deposit bonus option lets newcomers try games without risking their own money first.</p>
-
-<p>Wagering requirements are stated clearly for each promotion. Players know exactly what conditions apply before claiming any bonus. This honest approach prevents surprises and helps users make informed decisions about which offers suit their playing style.</p>
-
-<h2>Explore Engaging Bingo Rooms and Slots</h2>
-
-<p>The bingo categories at this casino cater to different preferences and budgets. Players find rooms with low-stakes tickets for casual fun and higher-value games for bigger prizes. Each room displays ticket prices, jackpot amounts, and game schedules clearly.</p>
-
-<p>Popular bingo variations include 75-ball, 90-ball, and speed bingo. The platform updates its selection regularly to keep gameplay fresh and exciting. Chat features in bingo rooms let players socialize while waiting for numbers to be called.</p>
-
-<p>Slot collections feature hundreds of titles with diverse themes. Players enjoy classic fruit machines, adventure-themed slots, and progressive jackpot games. The casino partners with reputable game developers to ensure quality graphics and fair random number generation.</p>
-
-<p>Game categories are organized for easy browsing:</p>
-
-<ul>
-<li>Classic slots with traditional symbols</li>
-<li>Video slots with bonus rounds and free spins</li>
-<li>Progressive jackpot slots with growing prizes</li>
-<li>Branded slots based on popular themes</li>
-<li>New releases updated monthly</li>
-</ul>
-
-<h3>Connect with Fellow Players</h3>
-
-<p>This friendly site encourages social interaction among its members. Bingo rooms include chat moderators who facilitate conversations and run mini-games between rounds. Players often form friendships through regular participation in their favorite rooms.</p>
-
-<p>The platform hosts special community events like themed nights and tournament competitions. These activities bring players together and create a sense of belonging. Social gaming features make the experience more enjoyable than playing alone.</p>
-
-<p>Tournament leaderboards display top performers and create friendly competition. Players can share achievements and celebrate wins together. This interactive atmosphere keeps members engaged and coming back regularly.</p>
-
-<h2>Play Securely at Spinobon Casino</h2>
-
-<p>Security measures protect players throughout their gaming journey. The platform uses SSL encryption to safeguard personal and financial data. Regular audits ensure that games operate fairly and random number generators function properly.</p>
-
-<p>Many players ask "is spinobon safe" before registering. The casino holds proper licensing and follows industry regulations for responsible gambling. These credentials provide reassurance about the platform's legitimacy and commitment to player protection.</p>
-
-<p>Responsible gambling tools help users maintain healthy gaming habits. Players can set deposit limits, loss limits, or take temporary breaks from their accounts. The casino provides links to support organizations for anyone experiencing gambling difficulties.</p>
-
-<p>Trustpilot reviews and independent ratings offer additional perspectives on the casino's reputation. The platform welcomes feedback and addresses concerns promptly. This open approach demonstrates confidence in service quality and fair play standards.</p>
-
-<h2>What Players Say and Final Thoughts</h2>
-
-<p>Spinobon real user feedback highlights several strengths of the platform. Players frequently praise the variety of games, straightforward bonus terms, and responsive customer support. The fast payout process receives particular appreciation in many reviews.</p>
-
-<p>Some users mention that peak hours can make popular bingo rooms crowded. However, the casino offers enough room variety that players can always find available seats. The balance between game selection and community atmosphere creates an enjoyable environment.</p>
-
-<p>User reviews consistently mention the friendly atmosphere and helpful chat moderators. Players value the transparent communication about rules, bonuses, and payment processing. These factors contribute to high satisfaction rates among regular members.</p>
-
-<p>Spinobon Casino delivers a solid gaming experience for bingo and slot enthusiasts. The platform combines diverse entertainment options with reliable payment methods and genuine community features. Players seeking a trustworthy casino with clear policies will find this site meets their expectations well.</p>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💎</span></div>
+                <div class="game-info"><div class="game-name">COIN WIN</div><div class="provider">GAMZIX</div></div>
+            </div>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">SNOOP DOGG DOLLARS</div><div class="provider">BGAMING</div></div>
+            </div>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💎</span></div>
+                <div class="game-info"><div class="game-name">GOLDEN DRAGON</div><div class="provider">BETSOFT</div></div>
+            </div>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">MONEYFEST</div><div class="provider">POPIPLAY</div></div>
+            </div>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span></div>
+                <div class="game-info"><div class="game-name">HELLHOT 100</div><div class="provider">ENDORPHINA</div></div>
             </div>
         </div>
+        <div class="center-btn-wrap">
+            <a href="https://afflink.com?utm-source-test=teeeest" class="btn-more">Play casino</a>
+        </div>
+
+        <!-- Live Casino Section -->
+        <h2 class="section-title">Live casino</h2>
+        <div class="game-grid">
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #44107a, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">Auto Roulette</div><div class="provider">PLATI+</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #44107a, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span></div>
+                <div class="game-info"><div class="game-name">Blackjack 7</div><div class="provider">LUCKY STREAK</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #44107a, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">🔄</span></div>
+                <div class="game-info"><div class="game-name">Las Vegas Roulette</div><div class="provider">ABSOLUTE LIVE</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #004d40, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">French Roulette</div><div class="provider">ICONIC21</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #1a237e, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">Roulette Live</div><div class="provider">PLATI+</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #1a237e, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">Roulette AUTO</div><div class="provider">LUCKY STREAK</div></div>
+            </div>
+        </div>
+        <div class="center-btn-wrap">
+            <a href="https://afflink.com?utm-source-test=teeeest" class="btn-more">Play Live casino</a>
+        </div>
+
+        <!-- Integrated Article Content -->
+        <section class="footer-text">
+            <h2>Welcome to Spinobon Casino</h2>
+
+            <p>Spinobon Casino offers a welcoming space for players who love bingo and slot games. The platform combines a user-friendly interface with a straightforward sign-up process. Players can enjoy various bingo rooms and slot titles in a secure environment.</p>
+
+            <p>This friendly site prioritizes transparency and fair gameplay. Spinobon Casino uses reliable payment methods to ensure smooth transactions. The platform focuses on building trust through clear rules and honest communication with its community.</p>
+
+            <p>New players find the registration process quick and hassle-free. The casino provides detailed information about bonuses, game rules, and payout procedures. This approach helps users feel confident about their gaming choices from the start.</p>
+
+            <h2>Why Choose Spinobon Casino</h2>
+
+            <p>Spinobon Casino stands out for several compelling reasons. The platform delivers an impressive collection of bingo categories and slot games. Players benefit from reliable customer support and transparent bonus offers that enhance their gaming experience.</p>
+
+            <p>The casino maintains high standards for fair gameplay and quick payouts. User reviews consistently highlight the platform's commitment to processing withdrawals promptly. This great site addresses common concerns about delayed payments and hidden fees.</p>
+
+            <p>Key benefits include:</p>
+
+            <ul>
+            <li>Easy account creation and verification</li>
+            <li>Diverse bingo rooms with various ticket prices</li>
+            <li>Extensive slot collections featuring popular themes</li>
+            <li>Clear bonus terms without confusing requirements</li>
+            <li>Responsive customer service team</li>
+            <li>No deposit bonus opportunities for new players</li>
+            </ul>
+
+            <h3>Simple Steps to Start Playing</h3>
+
+            <p>The spinobon login process takes just minutes to complete. New users click the registration button and provide basic information such as email address and preferred username. The system guides players through each step clearly.</p>
+
+            <p>Account verification happens quickly through email confirmation. Players can then make their first deposit and start exploring games immediately. The platform protects personal data with modern encryption technology.</p>
+
+            <p>Returning players access their accounts through the spinobon login portal. The system remembers credentials securely, making future visits even faster. Company details are readily available for users who want additional information about licensing and operations.</p>
+
+            <h2>Reliable Deposits and Fast Cash-Outs</h2>
+
+            <p>Understanding spinobon payment and withdrawal methods helps players manage their funds effectively. The casino supports multiple payment options to accommodate different preferences. Common methods include credit cards, e-wallets, and bank transfers.</p>
+
+            <p>Deposit processing typically happens instantly, allowing players to start gaming right away. Spinobon payment methods use secure connections to protect financial information. The platform displays all available options clearly during the transaction process.</p>
+
+            <p>Withdrawal requests receive prompt attention from the finance team. Most payout methods process within 24 to 48 hours, depending on the chosen option. The casino maintains transparent terms about any minimum withdrawal amounts or processing fees.</p>
+
+            <div class="table-container">
+                <table>
+                <tr>
+                <th>Payment Method</th>
+                <th>Deposit Time</th>
+                <th>Withdrawal Time</th>
+                </tr>
+                <tr>
+                <td>Credit/Debit Cards (spinobon casino)</td>
+                <td>Instant</td>
+                <td>3-5 business days</td>
+                </tr>
+                <tr>
+                <td>E-Wallets (spinobon casino)</td>
+                <td>Instant</td>
+                <td>24-48 hours</td>
+                </tr>
+                <tr>
+                <td>Bank Transfer (spinobon casino)</td>
+                <td>1-3 business days</td>
+                <td>3-7 business days</td>
+                </tr>
+                </table>
+            </div>
+
+            <p>Fast withdrawals make the gaming experience stress-free. Players appreciate knowing exactly when to expect their winnings. This transparency builds trust and encourages long-term relationships with the platform.</p>
+
+            <h3>Access Exciting Offers</h3>
+
+            <p>Spinobon bonuses add extra value to the gaming experience. New players often qualify for welcome packages that include bonus funds or free bingo tickets. The casino explains spinobon bonuses for bingo in simple terms that anyone can understand.</p>
+
+            <p>Regular players benefit from loyalty programs and seasonal promotions. These offers might include reload bonuses, cashback deals, or special tournament entries. The no deposit bonus option lets newcomers try games without risking their own money first.</p>
+
+            <p>Wagering requirements are stated clearly for each promotion. Players know exactly what conditions apply before claiming any bonus. This honest approach prevents surprises and helps users make informed decisions about which offers suit their playing style.</p>
+
+            <h2>Explore Engaging Bingo Rooms and Slots</h2>
+
+            <p>The bingo categories at this casino cater to different preferences and budgets. Players find rooms with low-stakes tickets for casual fun and higher-value games for bigger prizes. Each room displays ticket prices, jackpot amounts, and game schedules clearly.</p>
+
+            <p>Popular bingo variations include 75-ball, 90-ball, and speed bingo. The platform updates its selection regularly to keep gameplay fresh and exciting. Chat features in bingo rooms let players socialize while waiting for numbers to be called.</p>
+
+            <p>Slot collections feature hundreds of titles with diverse themes. Players enjoy classic fruit machines, adventure-themed slots, and progressive jackpot games. The casino partners with reputable game developers to ensure quality graphics and fair random number generation.</p>
+
+            <p>Game categories are organized for easy browsing:</p>
+
+            <ul>
+            <li>Classic slots with traditional symbols</li>
+            <li>Video slots with bonus rounds and free spins</li>
+            <li>Progressive jackpot slots with growing prizes</li>
+            <li>Branded slots based on popular themes</li>
+            <li>New releases updated monthly</li>
+            </ul>
+
+            <h3>Connect with Fellow Players</h3>
+
+            <p>This friendly site encourages social interaction among its members. Bingo rooms include chat moderators who facilitate conversations and run mini-games between rounds. Players often form friendships through regular participation in their favorite rooms.</p>
+
+            <p>The platform hosts special community events like themed nights and tournament competitions. These activities bring players together and create a sense of belonging. Social gaming features make the experience more enjoyable than playing alone.</p>
+
+            <p>Tournament leaderboards display top performers and create friendly competition. Players can share achievements and celebrate wins together. This interactive atmosphere keeps members engaged and coming back regularly.</p>
+
+            <h2>Play Securely at Spinobon Casino</h2>
+
+            <p>Security measures protect players throughout their gaming journey. The platform uses SSL encryption to safeguard personal and financial data. Regular audits ensure that games operate fairly and random number generators function properly.</p>
+
+            <p>Many players ask "is spinobon safe" before registering. The casino holds proper licensing and follows industry regulations for responsible gambling. These credentials provide reassurance about the platform's legitimacy and commitment to player protection.</p>
+
+            <p>Responsible gambling tools help users maintain healthy gaming habits. Players can set deposit limits, loss limits, or take temporary breaks from their accounts. The casino provides links to support organizations for anyone experiencing gambling difficulties.</p>
+
+            <p>Trustpilot reviews and independent ratings offer additional perspectives on the casino's reputation. The platform welcomes feedback and addresses concerns promptly. This open approach demonstrates confidence in service quality and fair play standards.</p>
+
+            <h2>What Players Say and Final Thoughts</h2>
+
+            <p>Spinobon real user feedback highlights several strengths of the platform. Players frequently praise the variety of games, straightforward bonus terms, and responsive customer support. The fast payout process receives particular appreciation in many reviews.</p>
+
+            <p>Some users mention that peak hours can make popular bingo rooms crowded. However, the casino offers enough room variety that players can always find available seats. The balance between game selection and community atmosphere creates an enjoyable environment.</p>
+
+            <p>User reviews consistently mention the friendly atmosphere and helpful chat moderators. Players value the transparent communication about rules, bonuses, and payment processing. These factors contribute to high satisfaction rates among regular members.</p>
+
+            <p>Spinobon Casino delivers a solid gaming experience for bingo and slot enthusiasts. The platform combines diverse entertainment options with reliable payment methods and genuine community features. Players seeking a trustworthy casino with clear policies will find this site meets their expectations well.</p>
+        </section>
     </main>
 
-    <div id="cookieBanner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 flex justify-between items-center z-50 shadow-2xl">
-        <p class="text-sm">This site uses cookies to provide technical features. By continuing, you agree to our use of cookies.</p>
-        <button onclick="document.getElementById('cookieBanner').style.display='none'" class="bg-[#8b0000] px-4 py-1 text-sm font-bold hover:bg-red-700">Dismiss</button>
-    </div>
-
-    <script>
-        lucide.createIcons();
-        function toggleMobileMenu(){
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        }
-        document.getElementById('searchInput').addEventListener('keypress', function(e){
-            if(e.key === 'Enter'){
-                window.location.href = "https://afflink.com?utm-source-test=teeeest";
-            }
-        });
-        const tabs = document.querySelectorAll('.tab-inactive');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                window.location.href = "https://afflink.com?utm-source-test=teeeest";
-            });
-        });
-    </script>
 </body>
 </html>
