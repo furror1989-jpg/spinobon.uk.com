@@ -3,168 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spino Bon - Access Restricted</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>SpinaBon - Casino</title>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1a050a;
-            color: white;
-            margin: 0;
-            overflow-x: hidden;
+        :root {
+            --bg-dark: #120107;
+            --card-bg: #4a0422;
+            --accent-yellow: #f8e71c;
+            --text-white: #ffffff;
+            --text-gray: #b1b1b1;
+            --btn-dark: #3a2e32;
         }
 
-        .oops-container {
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.5;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: var(--accent-yellow);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        nav a {
+            color: var(--text-white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+        }
+
+        .header-btns {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-login {
+            background: var(--btn-dark);
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .btn-signup {
+            background: var(--accent-yellow);
+            color: black;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Banner Section */
+        .banners {
+            display: flex;
+            gap: 20px;
+            padding: 30px 50px;
+            overflow-x: auto;
+        }
+
+        .banner-card {
+            min-width: 400px;
+            height: 200px;
+            background: linear-gradient(135deg, #70062f 0%, #3e031c 100%);
+            border-radius: 20px;
+            padding: 25px;
             position: relative;
-            width: 300px;
-            height: 250px;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
         }
 
-        .oops-text {
-            font-size: 80px;
-            font-weight: 900;
-            background: linear-gradient(to bottom, #ff72ff, #a020f0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 10px rgba(160, 32, 240, 0.8));
-            animation: float 3s ease-in-out infinite;
-            letter-spacing: -2px;
+        .banner-card h3 { margin: 0; font-size: 14px; color: var(--text-gray); }
+        .banner-card p { font-size: 20px; font-weight: bold; max-width: 200px; margin: 10px 0; }
+        .banner-card a { color: #ff3b8d; text-decoration: none; font-size: 12px; font-weight: bold; }
+
+        /* Game Sections */
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin: 40px 0 20px;
         }
 
-        .platform {
-            width: 120px;
-            height: 60px;
-            background: linear-gradient(to top, #ff0000, #ffff00);
-            border-radius: 20px;
-            box-shadow: 0 0 50px #ff0000, 0 0 20px #ffff00;
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            padding: 0 50px;
+        }
+
+        .game-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            height: 250px;
             position: relative;
-            margin-top: -10px;
-            z-index: -1;
-            border: 2px solid #ff5555;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s;
         }
 
-        .particles {
+        .game-card:hover { transform: translateY(-5px); }
+
+        .game-badge {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 5px;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+        .icon-circle {
+            width: 24px;
+            height: 24px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
         }
 
-        .glow-bg {
-            background: radial-gradient(circle, rgba(255, 0, 0, 0.1) 0%, rgba(26, 5, 10, 0) 70%);
+        .game-info {
             position: absolute;
+            bottom: 0;
             width: 100%;
-            height: 100%;
-            z-index: -2;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 10px;
+            text-align: center;
         }
 
-        .btn-yellow {
-            background-color: #ffff00;
+        .game-name { font-weight: bold; font-size: 14px; }
+        .provider { font-size: 10px; color: var(--text-gray); text-transform: uppercase; }
+
+        .center-btn-wrap {
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+        }
+
+        .btn-more {
+            background: var(--accent-yellow);
             color: black;
-            transition: all 0.3s ease;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
         }
 
-        .btn-yellow:hover {
-            background-color: #e6e600;
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+        /* Footer Text Block */
+        .footer-text {
+            background-color: rgba(255, 255, 255, 0.05);
+            margin: 50px;
+            padding: 40px;
+            border-radius: 20px;
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
+
+        .footer-text h2 { color: white; margin-bottom: 20px; }
+
+        /* Floating Bonus Notification */
+        .floating-bonus {
+            position: fixed;
+            top: 80px;
+            right: 50px;
+            background: #e91e63;
+            padding: 15px;
+            border-radius: 15px;
+            width: 220px;
+            z-index: 100;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Utility classes for placeholder images */
+        .bg-img { background-color: #333; background-image: linear-gradient(45deg, #333, #555); }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
+<body>
 
-    <!-- Header -->
-    <header class="w-full py-4 flex justify-center items-center bg-[#120306] border-b border-[#2d0a11]">
-        <div class="flex items-center gap-2">
-            <div class="bg-[#ff0000] w-8 h-8 rounded flex items-center justify-center font-black text-xl italic border-2 border-dashed border-white/30">
-                S
-            </div>
-            <div class="flex flex-col leading-none">
-                <span class="text-[#ffff00] font-black text-lg tracking-tighter">SPINO</span>
-                <span class="text-[#ff0000] font-black text-lg tracking-tighter">BON</span>
-            </div>
+    <header>
+        <div class="logo">S SPINBON</div>
+        <nav>
+            <a href="#">Login & Registration</a>
+            <a href="#">Application</a>
+            <a href="#">Bonuses</a>
+        </nav>
+        <div class="header-btns">
+            <button class="btn-login">Login</button>
+            <button class="btn-signup">Sign up</button>
+            <span style="font-size: 20px; cursor:pointer;">🎧</span>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow flex flex-col items-center justify-center px-6 text-center relative">
-        <div class="glow-bg"></div>
-
-        <!-- Illustration -->
-        <div class="oops-container mb-8">
-            <div class="oops-text italic">oops</div>
-            <div class="platform"></div>
-            <!-- Decorative particles/sparks -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex justify-around pointer-events-none opacity-50">
-                <div class="w-1 h-1 bg-yellow-400 rounded-full animate-ping" style="animation-delay: 0.2s"></div>
-                <div class="w-1 h-1 bg-red-500 rounded-full animate-ping" style="animation-delay: 0.5s"></div>
-                <div class="w-1 h-1 bg-purple-400 rounded-full animate-ping" style="animation-delay: 0.8s"></div>
-            </div>
+    <!-- Floating Banner -->
+    <div class="floating-bonus">
+        <div style="font-size: 30px;">🎁</div>
+        <div style="font-size: 11px;">
+            <b>Casino bonus</b><br>
+            250 Free Spins + 100% bonus for first 2 deposits
         </div>
-
-        <!-- Text Content -->
-        <h1 class="text-2xl md:text-3xl font-bold mb-6">We're sorry</h1>
-        
-        <div class="space-y-4 max-w-md">
-            <p class="text-gray-400 text-sm md:text-base">
-                The site is not available in your country.
-            </p>
-            <p class="text-white font-semibold text-sm md:text-base">
-                Have a question or need help restoring access?.
-            </p>
-        </div>
-
-        <!-- Action Button -->
-        <button onclick="window.location.href='mailto:support@spinobon.com'" class="btn-yellow mt-8 px-12 py-3 rounded-full font-bold text-sm uppercase tracking-wide">
-            Contact Support
-        </button>
-    </main>
-
-    <!-- Footer Space -->
-    <footer class="py-8">
-        <!-- Reserved for spacing to match screenshot -->
-    </footer>
-
-    <!-- Cookie Banner (Functional Hidden Implementation) -->
-    <div id="cookieBanner" class="fixed bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md p-4 rounded-xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 z-50 hidden">
-        <p class="text-xs text-gray-300">We use cookies to ensure you get the best experience on our website.</p>
-        <div class="flex gap-2">
-            <button onclick="hideElement('cookieBanner')" class="bg-white/10 hover:bg-white/20 text-white px-4 py-1 rounded-md text-xs transition">Dismiss</button>
-            <button onclick="hideElement('cookieBanner')" class="bg-yellow-400 text-black px-4 py-1 rounded-md text-xs font-bold">Accept</button>
-        </div>
+        <div style="cursor:pointer; position: absolute; top: 5px; right: 10px;">✕</div>
     </div>
 
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+    <main>
+        <!-- Banners -->
+        <section class="banners">
+            <div class="banner-card">
+                <h3>Welcome bonus</h3>
+                <p>250 Free Spins + 100% bonus for the first 2 deposits</p>
+                <a href="#">Tell me more →</a>
+            </div>
+            <div class="banner-card">
+                <h3>Regular bonuses</h3>
+                <p>Grab up to 75 Free Spins + 30% bonus</p>
+                <a href="#">Tell me more →</a>
+            </div>
+            <div class="banner-card">
+                <h3>Cashback</h3>
+                <p>Up to 20% cashback every week</p>
+                <a href="#">Tell me more →</a>
+            </div>
+        </section>
 
-        // Function to hide elements (Popups/Banners)
-        function hideElement(id) {
-            document.getElementById(id).style.display = 'none';
-        }
+        <!-- Casino Section -->
+        <h2 class="section-title">Casino</h2>
+        <div class="game-grid">
+            <!-- Game item x6 -->
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💎</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">3 COIN VOLCANOES</div><div class="provider">BOOONGO</div></div>
+            </div>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💎</span></div>
+                <div class="game-info"><div class="game-name">COIN WIN</div><div class="provider">GAMZIX</div></div>
+            </div>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">SNOOP DOGG DOLLARS</div><div class="provider">BGAMING</div></div>
+            </div>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💎</span></div>
+                <div class="game-info"><div class="game-name">GOLDEN DRAGON</div><div class="provider">BETSOFT</div></div>
+            </div>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">MONEYFEST</div><div class="provider">POPIPLAY</div></div>
+            </div>
+            <div class="game-card bg-img">
+                <div class="game-badge"><span class="icon-circle">🔥</span></div>
+                <div class="game-info"><div class="game-name">HELLHOT 100</div><div class="provider">ENDORPHINA</div></div>
+            </div>
+        </div>
+        <div class="center-btn-wrap">
+            <button class="btn-more">Play casino</button>
+        </div>
 
-        // Simple check to show cookie banner after 1 second
-        setTimeout(() => {
-            const banner = document.getElementById('cookieBanner');
-            if (banner) {
-                banner.classList.remove('hidden');
-                banner.classList.add('flex');
-            }
-        }, 1000);
+        <!-- Live Casino Section -->
+        <h2 class="section-title">Live casino</h2>
+        <div class="game-grid">
+            <!-- Live Game item x6 -->
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #44107a, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">Auto Roulette</div><div class="provider">PLATI+</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #44107a, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span></div>
+                <div class="game-info"><div class="game-name">Blackjack 7</div><div class="provider">LUCKY STREAK</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #44107a, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">🔄</span></div>
+                <div class="game-info"><div class="game-name">Las Vegas Roulette</div><div class="provider">ABSOLUTE LIVE</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #004d40, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">French Roulette</div><div class="provider">ICONIC21</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #1a237e, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">Roulette Live</div><div class="provider">PLATI+</div></div>
+            </div>
+            <div class="game-card bg-img" style="background-image: linear-gradient(to top, #1a237e, #120107);">
+                <div class="game-badge"><span class="icon-circle">🔥</span><span class="icon-circle">💰</span></div>
+                <div class="game-info"><div class="game-name">Roulette AUTO</div><div class="provider">LUCKY STREAK</div></div>
+            </div>
+        </div>
+        <div class="center-btn-wrap">
+            <button class="btn-more">Play Live casino</button>
+        </div>
 
-        // Console log to confirm script working
-        console.log("Interface Loaded Successfully");
-    </script>
+        <!-- New Text Block at the bottom -->
+        <section class="footer-text">
+            <h2>О нашем онлайн-казино SPINBON</h2>
+            <p>Добро пожаловать на SPINBON — вашу премиальную платформу для азартных игр. Мы предлагаем широкий ассортимент слотов, настольных игр и захватывающий опыт живого казино с реальными дилерами. Наша цель — обеспечить безопасную, честную и увлекательную игровую среду для всех пользователей.</p>
+            <p>Мы сотрудничаем с ведущими мировыми провайдерами игрового софта, такими как Booongo, Gamzix, Betsoft и многими другими, чтобы вы всегда имели доступ к самым популярным новинкам индустрии. Наша бонусная система разработана таким образом, чтобы радовать как новых игроков, так и наших постоянных клиентов ежедневными предложениями и кэшбэком.</p>
+            <p>Помните, что азартные игры должны приносить удовольствие. Мы поддерживаем принципы ответственной игры и предоставляем все необходимые инструменты для контроля ваших игровых сессий.</p>
+        </section>
+    </main>
+
 </body>
 </html>
